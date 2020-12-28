@@ -7,13 +7,14 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 
 @Data
 @MappedSuperclass
 @EqualsAndHashCode(of = {"id", "version"})
-public abstract class BaseEntity {
+public abstract class BaseEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

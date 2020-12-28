@@ -37,8 +37,6 @@ public class Film extends BaseEntity{
 
     private String url;
 
-/*
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private List<FilmComment> filmCommentList =  new ArrayList<>();*/
-
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "film")
+    private List<FilmRate> filmRate =  new ArrayList<>();
 }
