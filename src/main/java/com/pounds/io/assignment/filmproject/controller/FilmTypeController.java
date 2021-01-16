@@ -14,7 +14,7 @@ public class FilmTypeController {
 
     public String hello(){
 
-        return "merhaba";
+        return "merhaba ben ömer";
     }
 
 }
