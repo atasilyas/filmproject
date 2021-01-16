@@ -1,11 +1,9 @@
 package com.pounds.io.assignment.filmproject.controller;
 
 
+import com.pounds.io.assignment.filmproject.service.FilmTypeService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("http://localhost:9090/")
 @RestController
@@ -13,10 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class FilmTypeController {
 
-    @GetMapping("/{id}")
-    public String hello(){
+    private  final FilmTypeService filmTypeService;
 
-        return "merhaba ben ömer";
+    @GetMapping("/{id}")
+    public String getTypeById(@PathVariable("id") String id){
+
+        return filmTypeService.getTypeById(id);
     }
 
 }

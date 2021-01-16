@@ -23,7 +23,7 @@ public class FilmRateController {
     private final FilmRateService filmRateService;
 
     @PostMapping("/createFilmRate")
-    public ResponseEntity<?> createFilm(@Valid @RequestBody FilmRateDto filmRateDto) {
+    public ResponseEntity<?>  createFilm(@Valid @RequestBody FilmRateDto filmRateDto) {
         filmRateService.createFilmRate(filmRateDto);
         return ResponseEntity.ok().build();
     }
