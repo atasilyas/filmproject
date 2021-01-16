@@ -20,7 +20,12 @@ public class FilmTypeController {
     }
 
     @GetMapping("/{id}")
-    public String getTypeById1(@PathVariable("id") String id){
+    public String getTypeByI1d(@PathVariable("id") String id){
+
+        return filmTypeService.getTypeById(id);
+    }
+    @GetMapping("/{id}")
+    public String getTypeById2(@PathVariable("id") String id){
 
         return filmTypeService.getTypeById(id);
     }
